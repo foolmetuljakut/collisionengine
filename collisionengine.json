@@ -1,0 +1,35 @@
+{
+    "mainapp": {
+        "target": {
+            "name": "collisionengine-uut",
+            "opts": "-fdiagnostics-color=always -g -Wall -Wformat -Werror -Wfatal-errors -lsfml-graphics -lsfml-window -lsfml-system"
+        },
+        "files": [
+            {
+                "name": "grid.hpp",
+                "hash": "c0ec1e9c386b0295d9b1f0277c9a4934"
+            },
+            {
+                "name": "obj.hpp",
+                "hash": "6ba32376f162805ef718cb4f20984447"
+            },
+            {
+                "name": "util.hpp",
+                "hash": "065eeda7e885877c507870bed6f5c91e"
+            },
+            {
+                "name": "main.cpp",
+                "hash": "915d76a58042b8c9bb4635581d764b56"
+            },
+            {
+                "name": "worldspace.hpp",
+                "hash": "35f6232be6563e1a2a7e99c84e219bab"
+            },
+            {
+                "name": "application.hpp",
+                "hash": "b3e20e42bfd2e4a0f4f973766a80e8f6"
+            }
+        ]
+    },
+    "projects": ""
+}
