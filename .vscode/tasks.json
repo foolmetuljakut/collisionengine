@@ -1,0 +1,11 @@
+{
+    "version":"2.0.0",
+    "tasks": [
+        {
+            "label": "g++ via pmt",
+            "command": "../pmt/pmt -e collisionengine.json", // Could be any other shell command
+            "args": [],
+            "type": "shell"
+        }
+    ]
+}

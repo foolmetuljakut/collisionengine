@@ -4,6 +4,8 @@
             "name": "collisionengine-uut",
             "opts": "-fdiagnostics-color=always -g -Wall -Wformat -Werror -Wfatal-errors -lsfml-graphics -lsfml-window -lsfml-system"
         },
+        "unittestsymbol": "",
+        "unittestlistmax": 0,
         "files": [
             {
                 "name": "grid.hpp",
