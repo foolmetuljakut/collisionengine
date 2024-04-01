@@ -6,6 +6,12 @@
             "command": "../pmt/pmt -e collisionengine.json", // Could be any other shell command
             "args": [],
             "type": "shell"
+        },
+        {
+            "label": "mediantree via pmt",
+            "command": "../pmt/pmt -e mediantreetests.json", // Could be any other shell command
+            "args": [],
+            "type": "shell"
         }
     ]
 }

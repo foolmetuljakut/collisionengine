@@ -5,7 +5,7 @@
             "name": "debug pmt",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/collisionengine-uut",
+            "program": "${workspaceFolder}/mediantreetests",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
@@ -20,7 +20,7 @@
                 "ignoreFailures": true
               }
             ],
-            "preLaunchTask": "g++ via pmt"
+            "preLaunchTask": "mediantree via pmt"
           }
     ]
 }
