@@ -1,0 +1,3 @@
+[submodule "kd-tree"]
+	path = kd-tree
+	url = git@github.com:gishi523/kd-tree.git
