@@ -1,16 +1,12 @@
 {
     "mainapp": {
         "target": {
-            "name": "collisionengine-uut",
-            "opts": "-fdiagnostics-color=always -g -Wall -Wformat -Werror -Wfatal-errors -lsfml-graphics -lsfml-window -lsfml-system"
+            "name": "collisionengine",
+            "compilerflags": "-fdiagnostics-color=always -g -Wall -Wformat -Werror -Wfatal-errors",
+            "linkerflags": "-lsfml-graphics -lsfml-window -lsfml-system"
         },
-        "unittestsymbol": "",
-        "unittestlistmax": 0,
+        "version": "0.0.0.2",
         "files": [
-            {
-                "name": "grid.hpp",
-                "hash": "c0ec1e9c386b0295d9b1f0277c9a4934"
-            },
             {
                 "name": "obj.hpp",
                 "hash": "6ba32376f162805ef718cb4f20984447"
@@ -20,8 +16,8 @@
                 "hash": "065eeda7e885877c507870bed6f5c91e"
             },
             {
-                "name": "main.cpp",
-                "hash": "915d76a58042b8c9bb4635581d764b56"
+                "name": "grid.hpp",
+                "hash": "c0ec1e9c386b0295d9b1f0277c9a4934"
             },
             {
                 "name": "worldspace.hpp",
@@ -30,8 +26,11 @@
             {
                 "name": "application.hpp",
                 "hash": "b3e20e42bfd2e4a0f4f973766a80e8f6"
+            },
+            {
+                "name": "main.cpp",
+                "hash": "915d76a58042b8c9bb4635581d764b56"
             }
         ]
-    },
-    "projects": ""
+    }
 }
