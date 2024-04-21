@@ -1,37 +1,36 @@
 {
     "mainapp": {
         "target": {
-            "name": "collisionengine-uut",
-            "opts": "-fdiagnostics-color=always -g -Wall -Wformat -Werror -Wfatal-errors -lsfml-graphics -lsfml-window -lsfml-system"
+            "name": "collisionengine",
+            "compilerflags": "-fdiagnostics-color=always -g -Wall",
+            "linkerflags": "-lsfml-graphics -lsfml-window -lsfml-system"
         },
-        "unittestsymbol": "",
-        "unittestlistmax": 0,
+        "version": "0.0.0.26",
         "files": [
             {
-                "name": "grid.hpp",
-                "hash": "c0ec1e9c386b0295d9b1f0277c9a4934"
+                "name": ".\/obj.hpp",
+                "hash": "f2fd7a5d8d3b3df07a92cb8316c2303a"
             },
             {
-                "name": "obj.hpp",
-                "hash": "6ba32376f162805ef718cb4f20984447"
-            },
-            {
-                "name": "util.hpp",
+                "name": ".\/util.hpp",
                 "hash": "065eeda7e885877c507870bed6f5c91e"
             },
             {
-                "name": "main.cpp",
-                "hash": "915d76a58042b8c9bb4635581d764b56"
+                "name": ".\/kd-tree\/kdtree.hpp",
+                "hash": "d8fec7cbd503203364236fef2dfce9ad"
             },
             {
-                "name": "worldspace.hpp",
-                "hash": "35f6232be6563e1a2a7e99c84e219bab"
+                "name": ".\/worldspace.hpp",
+                "hash": "0f2e7e2f709c7f66c012c40e67ce4c9a"
             },
             {
-                "name": "application.hpp",
-                "hash": "b3e20e42bfd2e4a0f4f973766a80e8f6"
+                "name": ".\/application.hpp",
+                "hash": "5099f1bd3633025ef9814ce098614c78"
+            },
+            {
+                "name": ".\/main.cpp",
+                "hash": "00000000000000000000000000000000"
             }
         ]
-    },
-    "projects": ""
+    }
 }

@@ -31,27 +31,14 @@ namespace spheco {
             
             f << "general world info\nobjs, width, height, radii, fps, physics[ms], collision[ms], grid ops[ms], graphics[ms]\n";
             f << world.objs() << ", "
-                << world.getgrid().getw() << ", "
-                << world.getgrid().geth() << ", "
+                << world.w() << ", "
+                << world.h() << ", "
                 << world[0].radius << ", "
                 << fps << ", "
                 << phtime << ", "
                 << ctime << ", "
                 << gotime << ", "
                 << gtime << "\n\n";
-            
-            f << "bin info\ngrid x grid y, #objects present (omitted if 0 or 1)\n";
-            for(size_t x{world.getgrid().getw()}; x--;)
-                for(size_t y{world.getgrid().geth()}; y--;)
-                    if(world[sf::Vector2u{(unsigned)x, (unsigned)y}].size() > 1)
-                        f << x << ", " << y << ", " << world[sf::Vector2u{(unsigned)x, (unsigned)y}].size() << "\n";
-
-            f << "obj info\nx, y, grid x grid y\n";
-            for(size_t i{world.objs()}; i--;)
-                    f << world[i].pos.x << ", " 
-                        << world[i].pos.y << ", " 
-                        << world[i].gridpt.x << ", " 
-                        << world[i].gridpt.y << "\n";
 
             f.flush();
             f.close();
@@ -91,8 +78,7 @@ namespace spheco {
                 for(int _{40}; _--;) { // get fucked
                 unsigned i = world.objs() % 1000;
                 unsigned j = world.objs() / 1000;
-                auto tpos = sf::Vector2f{100, 58.6f} + (float)i * sf::Vector2f{0.001,0.7} + (float)j * sf::Vector2f{60,0}; 
-                world.create(tpos, sf::Vector2f{0,0}, radius, 1);
+                world.create(sf::Vector2f{100, 58.6f} + (float)i * sf::Vector2f{0.001,0.7} + (float)j * sf::Vector2f{60,0}, radius, 1);
 
                 sf::CircleShape shape(world[i].radius);
                 shape.setFillColor(sf::Color(100 + world.objs(), 250 + world.objs(), 50 + world.objs()));
@@ -130,7 +116,7 @@ namespace spheco {
             w{width}, h{height},
             window(sf::VideoMode(w, h), windowtitle),
             backg{false}, click{false}, fps{0}, phtime{0}, ctime{0}, gtime{0}, gotime{0}, 
-            world(radius, radius, (unsigned)(width/radius), (unsigned)(height/radius)),
+            world(radius, radius),
             radius{radius}, dt{dt}, substeps{substeps}
             {
                 window.setVerticalSyncEnabled(true);
@@ -153,8 +139,6 @@ namespace spheco {
                     ph0 += clock.restart().asMicroseconds();
                     world.updatecollision();
                     c0 += clock.restart().asMicroseconds();
-                    world.updategrid();
-                    go0 += clock.restart().asMicroseconds();
                 }
 
                 updategraphics();
